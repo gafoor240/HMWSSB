@@ -1,0 +1,23 @@
+2022-01-31 12:20:11,159 [14] INFO  AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails() - CAN 613392392
+2022-01-31 12:20:11,336 [14] INFO  AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails() - Submitted By 8686863442
+2022-01-31 12:20:11,337 [14] INFO  AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails() - JsonRequest CAN: 613392392 , CATEGORY:  , PREVIOUSMETERREADING: 0 , PREVIOUSMETERREADINGDATE: 1/1/0001 12:00:00 AM , PREVIOUSCONSUMPTIONUNITS: 0 , PRESENTMETERREADING: 0 , PRESENTCONSUMPTIONUNITS: 0 , MTRIMGLATITUDE:  , MTRIMGLONGITUDE:  , QUARTERTYPE: Quarter1 , CAPTUREDBY: 8686863442 , REMARKS: , APPVERSION: 1.0 , METERSTATUS: 
+2022-01-31 12:20:11,463 [14] ERROR AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails() - Exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails(CaptureMeterReading JsonRequest) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\Controllers\AMRController.cs:line 522 613392392 8686863442
+2022-01-31 12:20:29,226 [13] INFO  AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails() - CAN 613392392
+2022-01-31 12:20:31,215 [13] INFO  AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails() - Submitted By 8686863442
+2022-01-31 12:20:33,541 [13] INFO  AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails() - JsonRequest CAN: 613392392 , CATEGORY:  , PREVIOUSMETERREADING: 0 , PREVIOUSMETERREADINGDATE: 1/1/0001 12:00:00 AM , PREVIOUSCONSUMPTIONUNITS: 0 , PRESENTMETERREADING: 0 , PRESENTCONSUMPTIONUNITS: 0 , MTRIMGLATITUDE:  , MTRIMGLONGITUDE:  , QUARTERTYPE: Quarter1 , CAPTUREDBY: 8686863442 , REMARKS: , APPVERSION: 1.0 , METERSTATUS: 
+2022-01-31 12:21:30,506 [8] INFO  AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails() - CAN 613392392
+2022-01-31 12:22:28,402 [8] INFO  AMRMeter.DB.DBOperations.CaptureMeterReadingDetails() - Exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at AMRMeter.DB.DBOperations.CaptureMeterReadingDetails(CaptureMeterReading values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 950
+2022-01-31 12:22:28,402 [8] ERROR AMRMeter.DB.DBOperations.CaptureMeterReadingDetails() - System.NullReferenceException: Object reference not set to an instance of an object.
+   at AMRMeter.DB.DBOperations.CaptureMeterReadingDetails(CaptureMeterReading values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 950
+2022-01-31 12:22:28,417 [8] ERROR AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails() - Exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at AMRMeter.DB.DBOperations.CaptureMeterReadingDetails(CaptureMeterReading values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 1002
+   at AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails(CaptureMeterReading JsonRequest) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\Controllers\AMRController.cs:line 525 613392392 8686863442
+2022-01-31 12:22:37,109 [11] INFO  AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails() - CAN 619786583
+2022-01-31 12:22:58,489 [11] INFO  AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails() - Save Response True
+2022-01-31 12:23:24,575 [11] INFO  AMRMeter.Controllers.AMRController.CaptureMeterReadingDetails() - CAN 619786583
+2022-01-31 12:23:36,368 [11] INFO  AMRMeter.DB.DBOperations.CaptureMeterReadingDetails() - Exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at AMRMeter.DB.DBOperations.CaptureMeterReadingDetails(CaptureMeterReading values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 950
+2022-01-31 12:23:36,553 [11] ERROR AMRMeter.DB.DBOperations.CaptureMeterReadingDetails() - System.NullReferenceException: Object reference not set to an instance of an object.
+   at AMRMeter.DB.DBOperations.CaptureMeterReadingDetails(CaptureMeterReading values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 950

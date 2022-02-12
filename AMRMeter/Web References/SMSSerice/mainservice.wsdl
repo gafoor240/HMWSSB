@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="knowyourofficer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="can" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="knowyourofficerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="knowyourofficerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getsection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Lat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Long" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getsectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getsectionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="illegal_section">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Lat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Long" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="illegal_sectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="illegal_sectionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SENDTESTSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobileno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serialid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SENDTESTSMSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mVaayoBulkSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobileno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serialid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mVaayoBulkSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mVaayoBulkSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendOTP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobileno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serialid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendOTPResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendUniCodeSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobileno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serialid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendUniCodeSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendUniCodeSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendBulkSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobileno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serialid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendBulkSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendBulkSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendBulkSMSNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobileno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serialid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendBulkSMSNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendBulkSMSNewResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CDAC_SMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobileno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serialid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CDAC_SMSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CDAC_SMS_New">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobileno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serialid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CDAC_SMS_NewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CDAC_SMS_NewResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SingleSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobileno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serialid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SingleSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SingleSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RBSTCATEGORYID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CAN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RBSTCATEGORYIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RBSTCATEGORYIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MvayooIMITest">
+        <s:complexType />
+      </s:element>
+      <s:element name="MvayooIMITestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MvayooIMITestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="knowyourofficerSoapIn">
+    <wsdl:part name="parameters" element="tns:knowyourofficer" />
+  </wsdl:message>
+  <wsdl:message name="knowyourofficerSoapOut">
+    <wsdl:part name="parameters" element="tns:knowyourofficerResponse" />
+  </wsdl:message>
+  <wsdl:message name="getsectionSoapIn">
+    <wsdl:part name="parameters" element="tns:getsection" />
+  </wsdl:message>
+  <wsdl:message name="getsectionSoapOut">
+    <wsdl:part name="parameters" element="tns:getsectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="illegal_sectionSoapIn">
+    <wsdl:part name="parameters" element="tns:illegal_section" />
+  </wsdl:message>
+  <wsdl:message name="illegal_sectionSoapOut">
+    <wsdl:part name="parameters" element="tns:illegal_sectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SENDTESTSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SENDTESTSMS" />
+  </wsdl:message>
+  <wsdl:message name="SENDTESTSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SENDTESTSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="mVaayoBulkSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:mVaayoBulkSMS" />
+  </wsdl:message>
+  <wsdl:message name="mVaayoBulkSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:mVaayoBulkSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendOTPSoapIn">
+    <wsdl:part name="parameters" element="tns:SendOTP" />
+  </wsdl:message>
+  <wsdl:message name="SendOTPSoapOut">
+    <wsdl:part name="parameters" element="tns:SendOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendUniCodeSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendUniCodeSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendUniCodeSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendUniCodeSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendBulkSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendBulkSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSNewSoapIn">
+    <wsdl:part name="parameters" element="tns:SendBulkSMSNew" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSNewSoapOut">
+    <wsdl:part name="parameters" element="tns:SendBulkSMSNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="CDAC_SMSSoapIn">
+    <wsdl:part name="parameters" element="tns:CDAC_SMS" />
+  </wsdl:message>
+  <wsdl:message name="CDAC_SMSSoapOut">
+    <wsdl:part name="parameters" element="tns:CDAC_SMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="CDAC_SMS_NewSoapIn">
+    <wsdl:part name="parameters" element="tns:CDAC_SMS_New" />
+  </wsdl:message>
+  <wsdl:message name="CDAC_SMS_NewSoapOut">
+    <wsdl:part name="parameters" element="tns:CDAC_SMS_NewResponse" />
+  </wsdl:message>
+  <wsdl:message name="SingleSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SingleSMS" />
+  </wsdl:message>
+  <wsdl:message name="SingleSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SingleSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="RBSTCATEGORYIDSoapIn">
+    <wsdl:part name="parameters" element="tns:RBSTCATEGORYID" />
+  </wsdl:message>
+  <wsdl:message name="RBSTCATEGORYIDSoapOut">
+    <wsdl:part name="parameters" element="tns:RBSTCATEGORYIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="MvayooIMITestSoapIn">
+    <wsdl:part name="parameters" element="tns:MvayooIMITest" />
+  </wsdl:message>
+  <wsdl:message name="MvayooIMITestSoapOut">
+    <wsdl:part name="parameters" element="tns:MvayooIMITestResponse" />
+  </wsdl:message>
+  <wsdl:message name="knowyourofficerHttpGetIn">
+    <wsdl:part name="can" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="knowyourofficerHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getsectionHttpGetIn">
+    <wsdl:part name="Lat" type="s:string" />
+    <wsdl:part name="Long" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getsectionHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="illegal_sectionHttpGetIn">
+    <wsdl:part name="Lat" type="s:string" />
+    <wsdl:part name="Long" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="illegal_sectionHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SENDTESTSMSHttpGetIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+    <wsdl:part name="templateid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SENDTESTSMSHttpGetOut" />
+  <wsdl:message name="mVaayoBulkSMSHttpGetIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="mVaayoBulkSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendOTPHttpGetIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+    <wsdl:part name="templateid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendOTPHttpGetOut" />
+  <wsdl:message name="SendUniCodeSMSHttpGetIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendUniCodeSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSHttpGetIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSNewHttpGetIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSNewHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CDAC_SMSHttpGetIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+    <wsdl:part name="templateid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CDAC_SMSHttpGetOut" />
+  <wsdl:message name="CDAC_SMS_NewHttpGetIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+    <wsdl:part name="templateid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CDAC_SMS_NewHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SingleSMSHttpGetIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+    <wsdl:part name="templateid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SingleSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RBSTCATEGORYIDHttpGetIn">
+    <wsdl:part name="CAN" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RBSTCATEGORYIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="MvayooIMITestHttpGetIn" />
+  <wsdl:message name="MvayooIMITestHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="knowyourofficerHttpPostIn">
+    <wsdl:part name="can" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="knowyourofficerHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getsectionHttpPostIn">
+    <wsdl:part name="Lat" type="s:string" />
+    <wsdl:part name="Long" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getsectionHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="illegal_sectionHttpPostIn">
+    <wsdl:part name="Lat" type="s:string" />
+    <wsdl:part name="Long" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="illegal_sectionHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SENDTESTSMSHttpPostIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+    <wsdl:part name="templateid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SENDTESTSMSHttpPostOut" />
+  <wsdl:message name="mVaayoBulkSMSHttpPostIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="mVaayoBulkSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendOTPHttpPostIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+    <wsdl:part name="templateid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendOTPHttpPostOut" />
+  <wsdl:message name="SendUniCodeSMSHttpPostIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendUniCodeSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSHttpPostIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSNewHttpPostIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSNewHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CDAC_SMSHttpPostIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+    <wsdl:part name="templateid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CDAC_SMSHttpPostOut" />
+  <wsdl:message name="CDAC_SMS_NewHttpPostIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+    <wsdl:part name="templateid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CDAC_SMS_NewHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SingleSMSHttpPostIn">
+    <wsdl:part name="mobileno" type="s:string" />
+    <wsdl:part name="serialid" type="s:string" />
+    <wsdl:part name="templateid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SingleSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RBSTCATEGORYIDHttpPostIn">
+    <wsdl:part name="CAN" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RBSTCATEGORYIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="MvayooIMITestHttpPostIn" />
+  <wsdl:message name="MvayooIMITestHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="mainserviceSoap">
+    <wsdl:operation name="knowyourofficer">
+      <wsdl:input message="tns:knowyourofficerSoapIn" />
+      <wsdl:output message="tns:knowyourofficerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getsection">
+      <wsdl:input message="tns:getsectionSoapIn" />
+      <wsdl:output message="tns:getsectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="illegal_section">
+      <wsdl:input message="tns:illegal_sectionSoapIn" />
+      <wsdl:output message="tns:illegal_sectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SENDTESTSMS">
+      <wsdl:input message="tns:SENDTESTSMSSoapIn" />
+      <wsdl:output message="tns:SENDTESTSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mVaayoBulkSMS">
+      <wsdl:input message="tns:mVaayoBulkSMSSoapIn" />
+      <wsdl:output message="tns:mVaayoBulkSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <wsdl:input message="tns:SendOTPSoapIn" />
+      <wsdl:output message="tns:SendOTPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendUniCodeSMS">
+      <wsdl:input message="tns:SendUniCodeSMSSoapIn" />
+      <wsdl:output message="tns:SendUniCodeSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <wsdl:input message="tns:SendBulkSMSSoapIn" />
+      <wsdl:output message="tns:SendBulkSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMSNew">
+      <wsdl:input message="tns:SendBulkSMSNewSoapIn" />
+      <wsdl:output message="tns:SendBulkSMSNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS">
+      <wsdl:input message="tns:CDAC_SMSSoapIn" />
+      <wsdl:output message="tns:CDAC_SMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS_New">
+      <wsdl:input message="tns:CDAC_SMS_NewSoapIn" />
+      <wsdl:output message="tns:CDAC_SMS_NewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SingleSMS">
+      <wsdl:input message="tns:SingleSMSSoapIn" />
+      <wsdl:output message="tns:SingleSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RBSTCATEGORYID">
+      <wsdl:input message="tns:RBSTCATEGORYIDSoapIn" />
+      <wsdl:output message="tns:RBSTCATEGORYIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MvayooIMITest">
+      <wsdl:input message="tns:MvayooIMITestSoapIn" />
+      <wsdl:output message="tns:MvayooIMITestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="mainserviceHttpGet">
+    <wsdl:operation name="knowyourofficer">
+      <wsdl:input message="tns:knowyourofficerHttpGetIn" />
+      <wsdl:output message="tns:knowyourofficerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getsection">
+      <wsdl:input message="tns:getsectionHttpGetIn" />
+      <wsdl:output message="tns:getsectionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="illegal_section">
+      <wsdl:input message="tns:illegal_sectionHttpGetIn" />
+      <wsdl:output message="tns:illegal_sectionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SENDTESTSMS">
+      <wsdl:input message="tns:SENDTESTSMSHttpGetIn" />
+      <wsdl:output message="tns:SENDTESTSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mVaayoBulkSMS">
+      <wsdl:input message="tns:mVaayoBulkSMSHttpGetIn" />
+      <wsdl:output message="tns:mVaayoBulkSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <wsdl:input message="tns:SendOTPHttpGetIn" />
+      <wsdl:output message="tns:SendOTPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendUniCodeSMS">
+      <wsdl:input message="tns:SendUniCodeSMSHttpGetIn" />
+      <wsdl:output message="tns:SendUniCodeSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <wsdl:input message="tns:SendBulkSMSHttpGetIn" />
+      <wsdl:output message="tns:SendBulkSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMSNew">
+      <wsdl:input message="tns:SendBulkSMSNewHttpGetIn" />
+      <wsdl:output message="tns:SendBulkSMSNewHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS">
+      <wsdl:input message="tns:CDAC_SMSHttpGetIn" />
+      <wsdl:output message="tns:CDAC_SMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS_New">
+      <wsdl:input message="tns:CDAC_SMS_NewHttpGetIn" />
+      <wsdl:output message="tns:CDAC_SMS_NewHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SingleSMS">
+      <wsdl:input message="tns:SingleSMSHttpGetIn" />
+      <wsdl:output message="tns:SingleSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RBSTCATEGORYID">
+      <wsdl:input message="tns:RBSTCATEGORYIDHttpGetIn" />
+      <wsdl:output message="tns:RBSTCATEGORYIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MvayooIMITest">
+      <wsdl:input message="tns:MvayooIMITestHttpGetIn" />
+      <wsdl:output message="tns:MvayooIMITestHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="mainserviceHttpPost">
+    <wsdl:operation name="knowyourofficer">
+      <wsdl:input message="tns:knowyourofficerHttpPostIn" />
+      <wsdl:output message="tns:knowyourofficerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getsection">
+      <wsdl:input message="tns:getsectionHttpPostIn" />
+      <wsdl:output message="tns:getsectionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="illegal_section">
+      <wsdl:input message="tns:illegal_sectionHttpPostIn" />
+      <wsdl:output message="tns:illegal_sectionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SENDTESTSMS">
+      <wsdl:input message="tns:SENDTESTSMSHttpPostIn" />
+      <wsdl:output message="tns:SENDTESTSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mVaayoBulkSMS">
+      <wsdl:input message="tns:mVaayoBulkSMSHttpPostIn" />
+      <wsdl:output message="tns:mVaayoBulkSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <wsdl:input message="tns:SendOTPHttpPostIn" />
+      <wsdl:output message="tns:SendOTPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendUniCodeSMS">
+      <wsdl:input message="tns:SendUniCodeSMSHttpPostIn" />
+      <wsdl:output message="tns:SendUniCodeSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <wsdl:input message="tns:SendBulkSMSHttpPostIn" />
+      <wsdl:output message="tns:SendBulkSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMSNew">
+      <wsdl:input message="tns:SendBulkSMSNewHttpPostIn" />
+      <wsdl:output message="tns:SendBulkSMSNewHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS">
+      <wsdl:input message="tns:CDAC_SMSHttpPostIn" />
+      <wsdl:output message="tns:CDAC_SMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS_New">
+      <wsdl:input message="tns:CDAC_SMS_NewHttpPostIn" />
+      <wsdl:output message="tns:CDAC_SMS_NewHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SingleSMS">
+      <wsdl:input message="tns:SingleSMSHttpPostIn" />
+      <wsdl:output message="tns:SingleSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RBSTCATEGORYID">
+      <wsdl:input message="tns:RBSTCATEGORYIDHttpPostIn" />
+      <wsdl:output message="tns:RBSTCATEGORYIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MvayooIMITest">
+      <wsdl:input message="tns:MvayooIMITestHttpPostIn" />
+      <wsdl:output message="tns:MvayooIMITestHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="mainserviceSoap" type="tns:mainserviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="knowyourofficer">
+      <soap:operation soapAction="http://tempuri.org/knowyourofficer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getsection">
+      <soap:operation soapAction="http://tempuri.org/getsection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="illegal_section">
+      <soap:operation soapAction="http://tempuri.org/illegal_section" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SENDTESTSMS">
+      <soap:operation soapAction="http://tempuri.org/SENDTESTSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mVaayoBulkSMS">
+      <soap:operation soapAction="http://tempuri.org/mVaayoBulkSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <soap:operation soapAction="http://tempuri.org/SendOTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendUniCodeSMS">
+      <soap:operation soapAction="http://tempuri.org/SendUniCodeSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <soap:operation soapAction="http://tempuri.org/SendBulkSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMSNew">
+      <soap:operation soapAction="http://tempuri.org/SendBulkSMSNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS">
+      <soap:operation soapAction="http://tempuri.org/CDAC_SMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS_New">
+      <soap:operation soapAction="http://tempuri.org/CDAC_SMS_New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SingleSMS">
+      <soap:operation soapAction="http://tempuri.org/SingleSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RBSTCATEGORYID">
+      <soap:operation soapAction="http://tempuri.org/RBSTCATEGORYID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MvayooIMITest">
+      <soap:operation soapAction="http://tempuri.org/MvayooIMITest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="mainserviceSoap12" type="tns:mainserviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="knowyourofficer">
+      <soap12:operation soapAction="http://tempuri.org/knowyourofficer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getsection">
+      <soap12:operation soapAction="http://tempuri.org/getsection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="illegal_section">
+      <soap12:operation soapAction="http://tempuri.org/illegal_section" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SENDTESTSMS">
+      <soap12:operation soapAction="http://tempuri.org/SENDTESTSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mVaayoBulkSMS">
+      <soap12:operation soapAction="http://tempuri.org/mVaayoBulkSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <soap12:operation soapAction="http://tempuri.org/SendOTP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendUniCodeSMS">
+      <soap12:operation soapAction="http://tempuri.org/SendUniCodeSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <soap12:operation soapAction="http://tempuri.org/SendBulkSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMSNew">
+      <soap12:operation soapAction="http://tempuri.org/SendBulkSMSNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS">
+      <soap12:operation soapAction="http://tempuri.org/CDAC_SMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS_New">
+      <soap12:operation soapAction="http://tempuri.org/CDAC_SMS_New" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SingleSMS">
+      <soap12:operation soapAction="http://tempuri.org/SingleSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RBSTCATEGORYID">
+      <soap12:operation soapAction="http://tempuri.org/RBSTCATEGORYID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MvayooIMITest">
+      <soap12:operation soapAction="http://tempuri.org/MvayooIMITest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="mainserviceHttpGet" type="tns:mainserviceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="knowyourofficer">
+      <http:operation location="/knowyourofficer" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getsection">
+      <http:operation location="/getsection" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="illegal_section">
+      <http:operation location="/illegal_section" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SENDTESTSMS">
+      <http:operation location="/SENDTESTSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="mVaayoBulkSMS">
+      <http:operation location="/mVaayoBulkSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <http:operation location="/SendOTP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SendUniCodeSMS">
+      <http:operation location="/SendUniCodeSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <http:operation location="/SendBulkSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMSNew">
+      <http:operation location="/SendBulkSMSNew" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS">
+      <http:operation location="/CDAC_SMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS_New">
+      <http:operation location="/CDAC_SMS_New" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SingleSMS">
+      <http:operation location="/SingleSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RBSTCATEGORYID">
+      <http:operation location="/RBSTCATEGORYID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MvayooIMITest">
+      <http:operation location="/MvayooIMITest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="mainserviceHttpPost" type="tns:mainserviceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="knowyourofficer">
+      <http:operation location="/knowyourofficer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getsection">
+      <http:operation location="/getsection" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="illegal_section">
+      <http:operation location="/illegal_section" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SENDTESTSMS">
+      <http:operation location="/SENDTESTSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="mVaayoBulkSMS">
+      <http:operation location="/mVaayoBulkSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <http:operation location="/SendOTP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SendUniCodeSMS">
+      <http:operation location="/SendUniCodeSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <http:operation location="/SendBulkSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMSNew">
+      <http:operation location="/SendBulkSMSNew" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS">
+      <http:operation location="/CDAC_SMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CDAC_SMS_New">
+      <http:operation location="/CDAC_SMS_New" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SingleSMS">
+      <http:operation location="/SingleSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RBSTCATEGORYID">
+      <http:operation location="/RBSTCATEGORYID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MvayooIMITest">
+      <http:operation location="/MvayooIMITest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="mainservice">
+    <wsdl:port name="mainserviceSoap" binding="tns:mainserviceSoap">
+      <soap:address location="https://bms.hyderabadwater.gov.in/val/mainservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="mainserviceSoap12" binding="tns:mainserviceSoap12">
+      <soap12:address location="https://bms.hyderabadwater.gov.in/val/mainservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="mainserviceHttpGet" binding="tns:mainserviceHttpGet">
+      <http:address location="https://bms.hyderabadwater.gov.in/val/mainservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="mainserviceHttpPost" binding="tns:mainserviceHttpPost">
+      <http:address location="https://bms.hyderabadwater.gov.in/val/mainservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

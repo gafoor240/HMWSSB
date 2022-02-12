@@ -1,0 +1,81 @@
+2021-11-25 10:54:46,513 [7] INFO  AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance() - CAN 062101625
+2021-11-25 10:54:47,198 [7] INFO  AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance() - Submitted By 9553927868
+2021-11-25 10:54:48,075 [7] INFO  AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance() - JsonRequest CAN: 062101625 , ISDISPLAYWORKING: true , ISFOGPRESENTINSIDEMETERE: false , ISANYMETERREPAIRWORKS: false , ISMETERPRESENT: false , ISMETERSUBMERGED: false , ISMETERCHAMBERPRESENT: true , ISANYLEAKAGESPRESENT: false , ISPIPESIZESAME: true , CANLIVESTATUS: Live , REMARKS: Test , METERIMGLATITUDE: 17.124565, METERIMGLONGITUDE: 78.2541254 , INSPECTIONBY: 9553927868 , INSPECTIONSTATUS: customer issue , APPVERSION: 1.0 , LASTBREAKPOINT: 
+2021-11-25 10:55:32,872 [7] INFO  AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails() - Exception System.Data.OracleClient.OracleException (0x80131938): ORA-06550: line 1, column 7:
+PLS-00114: identifier 'SP_INSERT_AMR_PREVENTIVEMAINTA' too long
+
+   at System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   at System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   at System.Data.OracleClient.OracleCommand.ExecuteNonQueryInternal(Boolean needRowid, OciRowidDescriptor& rowidDescriptor)
+   at System.Data.OracleClient.OracleCommand.ExecuteNonQuery()
+   at AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails(PreventiveMaintanance values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 262
+2021-11-25 10:55:32,873 [7] ERROR AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails() - System.Data.OracleClient.OracleException (0x80131938): ORA-06550: line 1, column 7:
+PLS-00114: identifier 'SP_INSERT_AMR_PREVENTIVEMAINTA' too long
+
+   at System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   at System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   at System.Data.OracleClient.OracleCommand.ExecuteNonQueryInternal(Boolean needRowid, OciRowidDescriptor& rowidDescriptor)
+   at System.Data.OracleClient.OracleCommand.ExecuteNonQuery()
+   at AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails(PreventiveMaintanance values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 262
+2021-11-25 10:55:32,887 [7] ERROR AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance() - Exception System.Data.OracleClient.OracleException (0x80131938): ORA-06550: line 1, column 7:
+PLS-00114: identifier 'SP_INSERT_AMR_PREVENTIVEMAINTA' too long
+
+   at AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails(PreventiveMaintanance values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 276
+   at AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance(PreventiveMaintanance JsonRequest) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\Controllers\AMRController.cs:line 210 062101625 9553927868
+2021-11-25 10:56:19,498 [7] INFO  AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance() - CAN 062101625
+2021-11-25 10:56:19,614 [7] INFO  AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance() - Submitted By 9553927868
+2021-11-25 10:56:20,030 [7] INFO  AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance() - JsonRequest CAN: 062101625 , ISDISPLAYWORKING: true , ISFOGPRESENTINSIDEMETERE: false , ISANYMETERREPAIRWORKS: false , ISMETERPRESENT: false , ISMETERSUBMERGED: false , ISMETERCHAMBERPRESENT: true , ISANYLEAKAGESPRESENT: false , ISPIPESIZESAME: true , CANLIVESTATUS: Live , REMARKS: Test , METERIMGLATITUDE: 17.124565, METERIMGLONGITUDE: 78.2541254 , INSPECTIONBY: 9553927868 , INSPECTIONSTATUS: customer issue , APPVERSION: 1.0 , LASTBREAKPOINT: 
+2021-11-25 10:57:30,208 [7] INFO  AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails() - Exception System.Data.OracleClient.OracleException (0x80131938): ORA-06550: line 1, column 7:
+PLS-00114: identifier 'SP_INSERT_AMR_PREVENTIVEMAINTA' too long
+
+   at System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   at System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   at System.Data.OracleClient.OracleCommand.ExecuteNonQueryInternal(Boolean needRowid, OciRowidDescriptor& rowidDescriptor)
+   at System.Data.OracleClient.OracleCommand.ExecuteNonQuery()
+   at AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails(PreventiveMaintanance values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 262
+2021-11-25 10:57:30,209 [7] ERROR AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails() - System.Data.OracleClient.OracleException (0x80131938): ORA-06550: line 1, column 7:
+PLS-00114: identifier 'SP_INSERT_AMR_PREVENTIVEMAINTA' too long
+
+   at System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   at System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   at System.Data.OracleClient.OracleCommand.ExecuteNonQueryInternal(Boolean needRowid, OciRowidDescriptor& rowidDescriptor)
+   at System.Data.OracleClient.OracleCommand.ExecuteNonQuery()
+   at AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails(PreventiveMaintanance values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 262
+2021-11-25 10:57:30,223 [7] ERROR AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance() - Exception System.Data.OracleClient.OracleException (0x80131938): ORA-06550: line 1, column 7:
+PLS-00114: identifier 'SP_INSERT_AMR_PREVENTIVEMAINTA' too long
+
+   at AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails(PreventiveMaintanance values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 276
+   at AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance(PreventiveMaintanance JsonRequest) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\Controllers\AMRController.cs:line 210 062101625 9553927868
+2021-11-25 10:57:33,759 [10] INFO  AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance() - CAN 062101625
+2021-11-25 10:57:33,936 [10] INFO  AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance() - Submitted By 9553927868
+2021-11-25 10:57:34,318 [10] INFO  AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance() - JsonRequest CAN: 062101625 , ISDISPLAYWORKING: true , ISFOGPRESENTINSIDEMETERE: false , ISANYMETERREPAIRWORKS: false , ISMETERPRESENT: false , ISMETERSUBMERGED: false , ISMETERCHAMBERPRESENT: true , ISANYLEAKAGESPRESENT: false , ISPIPESIZESAME: true , CANLIVESTATUS: Live , REMARKS: Test , METERIMGLATITUDE: 17.124565, METERIMGLONGITUDE: 78.2541254 , INSPECTIONBY: 9553927868 , INSPECTIONSTATUS: customer issue , APPVERSION: 1.0 , LASTBREAKPOINT: 
+2021-11-25 10:57:45,154 [10] INFO  AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails() - Exception System.Data.OracleClient.OracleException (0x80131938): ORA-06550: line 1, column 7:
+PLS-00114: identifier 'SP_INSERT_AMR_PREVENTIVEMAINTA' too long
+
+   at System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   at System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   at System.Data.OracleClient.OracleCommand.ExecuteNonQueryInternal(Boolean needRowid, OciRowidDescriptor& rowidDescriptor)
+   at System.Data.OracleClient.OracleCommand.ExecuteNonQuery()
+   at AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails(PreventiveMaintanance values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 262
+2021-11-25 10:57:45,155 [10] ERROR AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails() - System.Data.OracleClient.OracleException (0x80131938): ORA-06550: line 1, column 7:
+PLS-00114: identifier 'SP_INSERT_AMR_PREVENTIVEMAINTA' too long
+
+   at System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   at System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   at System.Data.OracleClient.OracleCommand.ExecuteNonQueryInternal(Boolean needRowid, OciRowidDescriptor& rowidDescriptor)
+   at System.Data.OracleClient.OracleCommand.ExecuteNonQuery()
+   at AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails(PreventiveMaintanance values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 262
+2021-11-25 10:57:45,166 [10] ERROR AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance() - Exception System.Data.OracleClient.OracleException (0x80131938): ORA-06550: line 1, column 7:
+PLS-00114: identifier 'SP_INSERT_AMR_PREVENTIVEMAINTA' too long
+
+   at AMRMeter.DB.DBOperations.CapturePreventiveMaintananceDetails(PreventiveMaintanance values) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 276
+   at AMRMeter.Controllers.AMRController.CapturePreventiveMaintanance(PreventiveMaintanance JsonRequest) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\Controllers\AMRController.cs:line 210 062101625 9553927868
+2021-11-25 12:26:38,929 [8] ERROR AMRMeter.Controllers.AMRController.GetCanDetailswithStatus() - Exception System.Data.OracleClient.OracleException (0x80131938): ORA-00942: table or view does not exist
+
+   at System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   at System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   at System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   at System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.OracleClient.OracleCommand.ExecuteReader()
+   at AMRMeter.DB.DBOperations.GetCanDetailswithStatus(String can, String mobileNo) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\DB\DBOperations.cs:line 162
+   at AMRMeter.Controllers.AMRController.GetCanDetailswithStatus(String CAN, String MobileNo) in G:\NewApplications\Web Api\AMRMeter API\AMRMeter\AMRMeter\Controllers\AMRController.cs:line 175

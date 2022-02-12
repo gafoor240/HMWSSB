@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://bms.hyderabadwater.gov.in/val/mainservice.asmx?wsdl" docRef="https://bms.hyderabadwater.gov.in/val/mainservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://bms.hyderabadwater.gov.in/val/mainservice.asmx" xmlns:q1="http://tempuri.org/" binding="q1:mainserviceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://bms.hyderabadwater.gov.in/val/mainservice.asmx" xmlns:q2="http://tempuri.org/" binding="q2:mainserviceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>
